@@ -11,12 +11,12 @@ Este informe detalla una selección de **10 errores y malas prácticas** identif
 // Fix rápido: Eliminar líneas 11 a 13.
 ```
 
-### 2. app/src/main/java/com/example/simpsonsapp/data/repository/EpisodeRepositoryImpl.kt (Línea 21)
-**Lo que está mal:** Error de coincidencia de nombres (Mismatch). El método se llama `getEpisodes()` pero la interfaz `EpisodeRepository` define `get_episodes()`. El `override` fallará.
-**Lo que debería hacerse:** Renombrar el método para que coincida con la interfaz.
+### 2. app/src/main/java/com/example/simpsonsapp/domain/repository/EpisodeRepository.kt (Línea 7)
+**Lo que está mal:** El método está definido como `get_episodes()` (snake_case), lo cual no sigue las convenciones de nomenclatura de Kotlin y genera un error de coincidencia con la implementación.
+**Lo que debería hacerse:** Renombrar el método a `getEpisodes()` en la interfaz para cumplir con las convenciones de camelCase y corregir el error de compilación.
 ```kotlin
-// Fix rápido (Línea 21): 
-override fun get_episodes(): Flow<PagingData<Episode>> { ... }
+// Fix rápido (Línea 7): 
+fun getEpisodes(): Flow<PagingData<Episode>>
 ```
 
 ### 3. app/src/main/java/com/example/simpsonsapp/di/DataModule.kt (Línea 33)
