@@ -1,5 +1,8 @@
 # Revisión de código - SimpsonsApp
 
+**Enlace del repositorio:** [https://github.com/niconk97/SimpsonsAppParcialIglesias](https://github.com/niconk97/SimpsonsAppParcialIglesias)  
+**Rama de la revisión:** `revision-codigo`
+
 Este informe detalla una selección de **10 errores y malas prácticas** identificados en el proyecto, que abarcan desde errores de sintaxis que impiden la compilación hasta fallos en la arquitectura y lógica de la aplicación.
 
 **Nota sobre la metodología:** Se utilizó el agente de **GEMINI** para acelerar la búsqueda y detección de errores técnicos en el código fuente, mientras que la selección final de los casos presentados en este informe fue realizada por mi.
